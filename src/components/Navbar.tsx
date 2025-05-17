@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import styles from "@/styles/Navbar.module.scss";
-import Logo from "../../public/logo.png";
 import blackLogo from "../../public/logo_black.png";
 import Image from "next/image";
 

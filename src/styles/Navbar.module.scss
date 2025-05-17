@@ -1,6 +1,6 @@
 .navbar {
     background-color: white;
-    padding: 1rem;
+    padding: 8px;
     display: flex;
     gap: 2rem;
     justify-content: space-between;
@@ -68,7 +68,8 @@
 @media (max-width: 768px) {
     .navbar {
         justify-content: space-between;
-        padding: 1rem;
+        padding: 8px;
+        align-items: center;
 
         .links {
             .hamburger {
@@ -76,6 +77,7 @@
             }
             .mobileMenu.show {
                 display: flex;
+                margin-top: 16px;
 
                 a {
                     display: block;

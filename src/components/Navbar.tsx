@@ -14,8 +14,8 @@ export default function Navbar() {
                 <Image
                     src={blackLogo}
                     alt="Tarot by Simran"
-                    height={50}
-                    width={50}
+                    height={60}
+                    width={60}
                 />
             </div>
 

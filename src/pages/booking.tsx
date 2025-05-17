@@ -1,0 +1,18 @@
+const calendlyUrl = "https://calendly.com/your-calendly-link"
+
+export default function Booking() {
+  return (
+    <section className="booking">
+      <h2>Book a Session</h2>
+      <iframe
+        src={calendlyUrl}
+        width="100%"
+        height="600"
+        frameBorder={0}
+        scrolling="no"
+        style={{ border: 'none' }}
+        allowFullScreen
+      ></iframe>
+    </section>
+  )
+}

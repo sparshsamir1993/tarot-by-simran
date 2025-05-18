@@ -5,6 +5,10 @@
     gap: 2rem;
     justify-content: space-between;
     font-weight: bold;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
 
     a {
         color: #2e2e2e;
@@ -16,6 +20,8 @@
     }
 
     .links {
+        margin-right: 16px;
+
         .desktopLinks {
             display: flex;
             gap: 2rem;
@@ -69,7 +75,6 @@
     .navbar {
         justify-content: space-between;
         padding: 8px;
-        align-items: center;
 
         .links {
             .hamburger {
@@ -84,9 +89,9 @@
                 }
             }
         }
-    }
 
-    .navbar a {
-        display: none;
+        a {
+            display: none;
+        }
     }
 }

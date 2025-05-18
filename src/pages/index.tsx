@@ -1,13 +1,21 @@
 import styles from "@/styles/Home.module.scss";
 import Image from "next/image";
+import { Yesteryear } from "next/font/google";
 import simranWithCards from "../../public/simran_with_cards.png";
+
+const yesteryear = Yesteryear({
+    weight: "400",
+    subsets: ["latin"],
+});
 
 export default function Home() {
     return (
         <section className={styles.home}>
             <div className={styles.home__content}>
-                <h1 className={styles.home__heading}>
-                    Welcome to Readings by Simran Brar
+                <h1
+                    className={`${styles.home__heading} ${yesteryear.className}`}
+                >
+                    Tarot Mystics by Simran Brar
                 </h1>
                 <div className={styles.home__image}>
                     <Image

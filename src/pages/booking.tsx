@@ -1,8 +1,9 @@
+import styles from "@/styles/Booking.module.scss";
 const calendlyUrl = "https://calendly.com/sparshsamir1993";
 
 export default function Booking() {
     return (
-        <section className="booking">
+        <section className={styles.booking}>
             <h2>Book a Session</h2>
             <iframe
                 src={calendlyUrl}

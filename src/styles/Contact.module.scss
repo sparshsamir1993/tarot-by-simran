@@ -1,0 +1,24 @@
+.contact {
+    margin-top: 80px;
+
+    &__content {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(16px);
+        border-radius: 16px;
+        padding: 2rem;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 32px 16px;
+
+        &--socials {
+            display: flex;
+            justify-content: center;
+            .icon {
+                fill: purple;
+                cursor: pointer;
+            }
+        }
+    }
+}

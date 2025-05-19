@@ -61,6 +61,18 @@ export default function Home() {
                         </li>
                     </ul>
                 </div>
+                <hr className={styles.home__divider} />
+                <div className={styles.home__booking}>
+                    {/* <h2 className={styles["home__booking-heading"]}>
+                        Book a Session
+                    </h2> */}
+                    <a
+                        href="/booking"
+                        className={styles["home__booking-button"]}
+                    >
+                        🔮 Book a Session
+                    </a>
+                </div>
             </div>
         </section>
     );

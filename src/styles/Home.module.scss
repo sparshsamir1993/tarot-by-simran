@@ -1,3 +1,23 @@
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 .home {
     margin-top: 80px;
 
@@ -11,33 +31,104 @@
         margin: 0 auto;
         text-align: center;
         padding: 32px 16px;
+        animation: fadeIn 0.5s ease-in;
     }
 
     &__heading {
         font-size: 2.5rem;
         margin-bottom: 0.5rem;
         color: #2e2e2e;
+        animation: fadeInUp 0.5s ease-out;
+        animation-fill-mode: both;
     }
 
     &__subheading {
         font-style: italic;
         color: #555;
         margin-bottom: 1.5rem;
+        position: relative;
+        display: inline-block;
+        transition: color 0.3s ease;
+    }
+
+    &__subheading::after {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #d4af37;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s ease;
+    }
+
+    &__subheading:hover::after {
+        transform: scaleX(1);
     }
 
     &__services-heading {
         font-size: 1.4rem;
         margin-bottom: 0.75rem;
+        animation: fadeInUp 0.5s ease-out;
+        animation-fill-mode: both;
     }
 
     &__services-list {
         list-style-type: disc;
         padding-left: 1.5rem;
         text-align: left;
+        animation: fadeIn 1s ease-in-out;
     }
 
     &__services-item {
         margin-bottom: 0.5rem;
         color: #333;
+        padding: 0.5rem;
+        transition: background 0.3s ease, transform 0.3s ease;
+        border-radius: 8px;
+
+        &:hover {
+            background-color: rgba(212, 175, 55, 0.1);
+            transform: translateX(5px);
+        }
+    }
+
+    &__divider {
+        margin: 2rem auto;
+        width: 60%;
+        border: none;
+        border-top: 1px solid #ccc;
+        animation: fadeIn 1.5s ease;
+    }
+
+    &__booking {
+        text-align: center;
+        animation: fadeInUp 1s ease-out;
+        animation-fill-mode: both;
+    }
+
+    &__booking-button {
+        display: inline-block;
+        background: linear-gradient(90deg, #d4af37, #b88a44);
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 999px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+        }
+
+        &:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
     }
 }

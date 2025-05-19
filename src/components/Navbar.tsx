@@ -7,47 +7,59 @@ import Image from "next/image";
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
 
+    const navLinks = () => {
+        return (
+            <>
+                <Link
+                    href="/"
+                    className={styles.nav_links}
+                    onClick={() => setMenuOpen(false)}
+                >
+                    Home
+                </Link>
+                <Link
+                    href="/services"
+                    className={styles.nav_links}
+                    onClick={() => setMenuOpen(false)}
+                >
+                    Services
+                </Link>
+                <Link
+                    href="/booking"
+                    className={styles.nav_links}
+                    onClick={() => setMenuOpen(false)}
+                >
+                    Booking
+                </Link>
+                <Link
+                    href="/contact"
+                    className={styles.nav_links}
+                    onClick={() => setMenuOpen(false)}
+                >
+                    Contact
+                </Link>
+            </>
+        );
+    };
+
     return (
         <nav className={styles.navbar} aria-label="Main navigation">
             {/* Logo */}
             <div className={styles.logo}>
-                <Image
-                    src={blackLogo}
-                    alt="Tarot by Simran"
-                    height={60}
-                    width={60}
-                />
+                <Link href="/">
+                    <Image
+                        src={blackLogo}
+                        alt="Tarot by Simran"
+                        height={60}
+                        width={60}
+                    />
+                </Link>
             </div>
 
             {/* Navigation Links */}
             <div className={styles.links}>
                 {/* Desktop Links */}
-                <div className={styles.desktopLinks}>
-                    <Link onClick={() => setMenuOpen(!menuOpen)} href="/">
-                        Home
-                    </Link>
-                    <Link onClick={() => setMenuOpen(!menuOpen)} href="/about">
-                        About
-                    </Link>
-                    <Link
-                        onClick={() => setMenuOpen(!menuOpen)}
-                        href="/services"
-                    >
-                        Services
-                    </Link>
-                    <Link
-                        onClick={() => setMenuOpen(!menuOpen)}
-                        href="/booking"
-                    >
-                        Booking
-                    </Link>
-                    <Link
-                        onClick={() => setMenuOpen(!menuOpen)}
-                        href="/contact"
-                    >
-                        Contact
-                    </Link>
-                </div>
+                <div className={styles.desktopLinks}>{navLinks()}</div>
 
                 {/* Hamburger Icon */}
                 <div
@@ -65,21 +77,7 @@ export default function Navbar() {
                         menuOpen ? styles.show : ""
                     }`}
                 >
-                    <Link href="/" onClick={() => setMenuOpen(false)}>
-                        Home
-                    </Link>
-                    <Link href="/about" onClick={() => setMenuOpen(false)}>
-                        About
-                    </Link>
-                    <Link href="/services" onClick={() => setMenuOpen(false)}>
-                        Services
-                    </Link>
-                    <Link href="/booking" onClick={() => setMenuOpen(false)}>
-                        Booking
-                    </Link>
-                    <Link href="/contact" onClick={() => setMenuOpen(false)}>
-                        Contact
-                    </Link>
+                    {navLinks()}
                 </div>
             </div>
         </nav>

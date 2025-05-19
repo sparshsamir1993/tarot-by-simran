@@ -7,7 +7,7 @@ export default function Booking() {
             <iframe
                 src={calendlyUrl}
                 width="100%"
-                height="600"
+                height="700"
                 frameBorder={0}
                 scrolling="no"
                 style={{ border: "none" }}

@@ -64,9 +64,6 @@ export default function Home() {
                 </div>
                 <hr className={styles.home__divider} />
                 <div className={styles.home__booking}>
-                    {/* <h2 className={styles["home__booking-heading"]}>
-                        Book a Session
-                    </h2> */}
                     <Link
                         href="/booking"
                         className={styles["home__booking-button"]}

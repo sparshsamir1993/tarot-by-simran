@@ -2,6 +2,7 @@ import styles from "@/styles/Home.module.scss";
 import Image from "next/image";
 import { Yesteryear } from "next/font/google";
 import simranWithCards from "../../public/simran_with_cards.png";
+import Link from "next/link";
 
 const yesteryear = Yesteryear({
     weight: "400",
@@ -66,12 +67,12 @@ export default function Home() {
                     {/* <h2 className={styles["home__booking-heading"]}>
                         Book a Session
                     </h2> */}
-                    <a
+                    <Link
                         href="/booking"
                         className={styles["home__booking-button"]}
                     >
                         🔮 Book a Session
-                    </a>
+                    </Link>
                 </div>
             </div>
         </section>
